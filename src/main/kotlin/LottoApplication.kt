@@ -1,10 +1,10 @@
 import view.LottoInputView
 
+
+
 fun main() {
     val lottoView = LottoInputView()
     val money = scanMoney(lottoView)
-
-
 }
 
 private fun scanMoney(lottoView: LottoInputView): Int {
