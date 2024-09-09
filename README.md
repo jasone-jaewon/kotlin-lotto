@@ -84,6 +84,7 @@
 - 일급 컬렉션을 쓴다.
   - 6개의 숫자 값을 가지는 컬렉션을 감싸는 객체를 추가해 구현해 본다.
   - 하드 코딩을 하지 않기 위해 상수 값을 사용하면 많은 상수 값이 발생한다. Enum 클래스를 활용해 상수 값을 제거한다. 즉, Enum 클래스를 활용해 일치하는 수를 로또 등수로 변경해 본다.
+  - ...
 
 ```kotlin
 enum class Rank(val countOfMatch: Int, val winningMoney: Int) {
