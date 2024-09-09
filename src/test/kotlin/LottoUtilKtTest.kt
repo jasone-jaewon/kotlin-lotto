@@ -1,5 +1,7 @@
+import io.kotest.matchers.shouldBe
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
 class LottoUtilKtTest{
@@ -20,4 +22,12 @@ class LottoUtilKtTest{
         assertThat(results).isEqualTo(12)
     }
 
+    @Test
+    fun `generateLottoNumbersTest`() {
+        // when
+        val numbers = generateLottoNumbers()
+
+        // then
+        numbers.size shouldBe 6
+    }
 }
