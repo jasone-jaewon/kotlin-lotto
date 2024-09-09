@@ -3,6 +3,9 @@ package model
 class LottoNumbers(
     val numbers: List<Int>
 ) {
+    val size: Int
+        get() = numbers.size
+
     init {
         require(numbers.size == 6) {
             "[ERROR] 정상적인 로토 번호 조합이 아닙니다."
