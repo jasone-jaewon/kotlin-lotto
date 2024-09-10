@@ -1,5 +1,6 @@
 package model
 
+import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 
@@ -47,5 +48,31 @@ internal class LottoNumbersTest {
 
         // when & then
         assertThrows<IllegalArgumentException> { LottoNumbers(numbers) }
+    }
+
+    @Test
+    fun `매칭된 숫자 테스트 - 모두 매칭`() {
+        // given
+        val lottoNumbers = LottoNumbers(1, 2, 3, 4, 5, 6)
+        val otherNumbers = LottoNumbers(1, 2, 3, 4, 5, 6)
+
+        // when
+        val matchedCount = lottoNumbers.match(otherNumbers)
+
+        // then
+        matchedCount shouldBe lottoNumbers.size
+    }
+
+    @Test
+    fun `매칭된 숫자 테스트 - 5개 매칭`() {
+        // given
+        val lottoNumbers = LottoNumbers(1, 2, 3, 4, 5, 6)
+        val otherNumbers = LottoNumbers(1, 2, 3, 4, 6, 7)
+
+        // when
+        val matchedCount = lottoNumbers.match(otherNumbers)
+
+        // then
+        matchedCount shouldBe 5
     }
 }

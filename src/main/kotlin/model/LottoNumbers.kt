@@ -13,4 +13,10 @@ class LottoNumbers(
             "[ERROR] 정상적인 로토 번호가 아닙니다."
         }
     }
+
+    constructor(vararg numbers: Int) : this(numbers.toList())
+
+    fun match(lottoNumbers: LottoNumbers): Int {
+        TODO("매칭된 숫자 리턴")
+    }
 }
