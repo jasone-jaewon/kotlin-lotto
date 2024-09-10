@@ -1,6 +1,6 @@
 package model
 
-class LottoNumbers(
+data class LottoNumbers(
     val numbers: List<Int>
 ) : List<Int> by numbers {
 

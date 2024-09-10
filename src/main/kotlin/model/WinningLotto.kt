@@ -1,8 +1,8 @@
 package model
 
 data class WinningLotto(
-    private val lotto: Lotto,
-    private val bonus: Int
+    val lotto: Lotto,
+    val bonus: Int
 ) {
     init {
         require(bonus !in lotto.numbers) {

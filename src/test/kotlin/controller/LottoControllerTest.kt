@@ -25,15 +25,16 @@ internal class LottoControllerTest {
     @Test
     fun `당첨 로또를 생성한다`() {
         // given
-        val lottoNumbers = LottoNumbers(1, 2, 3, 4, 5, 6)
+        val lottoNumbers = listOf(1, 2, 3, 4, 5, 6)
         val bonusNumber = 45
-        val expected = WinningLotto(Lotto(lottoNumbers), bonusNumber)
+        val expected = WinningLotto(Lotto(LottoNumbers(lottoNumbers)), bonusNumber)
 
         // when
         val winningLotto = lottoController.createWinningLotto(lottoNumbers, bonusNumber)
 
         // then
-        winningLotto shouldBe expected
+        winningLotto.lotto shouldBe expected.lotto
+        winningLotto.bonus shouldBe expected.bonus
     }
 
     @Test

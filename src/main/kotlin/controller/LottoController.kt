@@ -16,6 +16,12 @@ class LottoController {
     }
 
     fun getWinningResults(lottos: List<Lotto>, winningLotto: WinningLotto): LottoResult {
-        TODO()
+        val prizeCountMap = lottos.map { lotto ->
+            val matchedCount = winningLotto.lotto.numbers.match(lotto.numbers)
+            val matchBonus = lotto.numbers.matchBonus(winningLotto.bonus)
+            winningLotto.rank(matchedCount, matchBonus)
+        }.groupingBy { it }.eachCount()
+
+        return LottoResult(prizeCountMap)
     }
 }
