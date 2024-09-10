@@ -3,8 +3,9 @@ package controller
 import io.kotest.matchers.shouldBe
 import model.Lotto
 import model.LottoNumbers
-import model.LottoRank
+import model.LottoResult
 import model.WinningLotto
+import model.LottoRank
 import org.junit.jupiter.api.Test
 
 internal class LottoControllerTest {
@@ -48,5 +49,18 @@ internal class LottoControllerTest {
 
         result.size shouldBe 1
         result[LottoRank.FIRST] shouldBe 1
+    }
+
+    @Test
+    fun `당첨 수익률 계산`() {
+        val lottoResult = LottoResult(
+            mapOf(LottoRank.FIFTH to 5, LottoRank.FORTH to 3)
+        )
+        val totalPrice = 500000
+        val expected = 0.35
+
+        val actual = lottoController.calculateWinningRate(lottoResult, totalPrice)
+
+        actual shouldBe expected
     }
 }

@@ -24,4 +24,8 @@ class LottoController {
 
         return LottoResult(prizeCountMap)
     }
+
+    fun calculateWinningRate(results: LottoResult, totalPrice: Int): Double {
+        TODO("Not yet implemented")
+    }
 }

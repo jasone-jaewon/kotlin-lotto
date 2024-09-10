@@ -17,6 +17,8 @@ fun main() {
 
     val results = lottoController.getWinningResults(lottos, winningLotto)
     lottoView.printLottoPrize(results)
+
+    val winningRate = lottoController.calculateWinningRate(results)
 }
 
 private fun scanMoney(lottoView: LottoInputView): Int {
