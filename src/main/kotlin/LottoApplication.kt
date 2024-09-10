@@ -13,7 +13,7 @@ fun main() {
     val winningLottoNumbers = scanWinningLotto(lottoView)
     val bonusNumber = scanBonusNumber(lottoView)
 
-//    lottoController.createWinningLotto()
+    val winningLotto = lottoController.createWinningLotto(winningLottoNumbers, bonusNumber)
 }
 
 private fun scanMoney(lottoView: LottoInputView): Int {

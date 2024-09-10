@@ -10,6 +10,8 @@ data class WinningLotto(
         }
     }
 
+    constructor(lottoNumbers: LottoNumbers, bonusNumber: Int) : this(Lotto(lottoNumbers), bonusNumber)
+
     fun rank(matchedNum: Int, bonusMatch: Boolean): LottoRank {
         if (matchedNum == LottoRank.FIRST.matchedCount) {
             return LottoRank.FIRST

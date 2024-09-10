@@ -10,7 +10,7 @@ class LottoController {
         return List(games) { Lotto(generateLottoNumbers()) }
     }
 
-    fun createWinningLotto(lottoNumbers: LottoNumbers, bonusNumber: Int): WinningLotto {
-        return WinningLotto(Lotto(lottoNumbers), bonusNumber)
+    fun createWinningLotto(lottoNumbers: List<Int>, bonusNumber: Int): WinningLotto {
+        return WinningLotto(LottoNumbers(lottoNumbers), bonusNumber)
     }
 }
