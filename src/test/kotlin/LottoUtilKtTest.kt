@@ -1,10 +1,8 @@
 import io.kotest.matchers.shouldBe
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
-class LottoUtilKtTest{
+class LottoUtilKtTest {
     @Test
     fun calculateLotteryGames1() {
         val results = calculateLotteryGames(15000)
@@ -13,7 +11,7 @@ class LottoUtilKtTest{
 
     @Test
     fun calculateLotteryGames2() {
-        org.junit.jupiter.api.assertThrows<IllegalArgumentException> { calculateLotteryGames(-1000)  }
+        org.junit.jupiter.api.assertThrows<IllegalArgumentException> { calculateLotteryGames(-1000) }
     }
 
     @Test

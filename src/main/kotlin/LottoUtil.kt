@@ -14,7 +14,7 @@ fun calculateLotteryGames(money: Int): Int {
     return money / DIVIDE_UNIT
 }
 
-fun generateLottoNumbers () : LottoNumbers {
-    val numbers = (MINIMUM_LOTTO_NUM.. MAXIMUM_LOTTO_NUM).shuffled().slice(ZERO..MAX_NUM).sorted()
+fun generateLottoNumbers(): LottoNumbers {
+    val numbers = (MINIMUM_LOTTO_NUM..MAXIMUM_LOTTO_NUM).shuffled().slice(ZERO..MAX_NUM).sorted()
     return LottoNumbers(numbers)
 }
