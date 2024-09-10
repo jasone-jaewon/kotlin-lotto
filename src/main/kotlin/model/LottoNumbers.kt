@@ -19,4 +19,8 @@ class LottoNumbers(
     fun match(lottoNumbers: LottoNumbers): Int {
         return numbers.intersect(lottoNumbers.toSet()).size
     }
+
+    fun matchBonus(bonusNum: Int): Boolean {
+        TODO()
+    }
 }
