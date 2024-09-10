@@ -1,6 +1,8 @@
 package view
 
 import model.Lotto
+import model.LottoRank
+import model.LottoResult
 
 class LottoInputView {
     companion object {
@@ -36,5 +38,11 @@ class LottoInputView {
     fun printLottos(lottos: List<Lotto>) {
         println("${lottos.size}개를 구매하셨습니다.")
         lottos.forEach { println(it.numbers.numbers) }
+    }
+
+    fun printLottoPrize(lottoResult: LottoResult) {
+        LottoRank.values().forEach {
+            println("${it.matchedCount}개 일치 (${it.prize}원) - ${lottoResult[it] ?: 0}개")
+        }
     }
 }
