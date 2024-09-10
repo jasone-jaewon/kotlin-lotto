@@ -1,7 +1,6 @@
 import controller.LottoController
 import view.LottoInputView
 
-
 val lottoController = LottoController()
 
 fun main() {
