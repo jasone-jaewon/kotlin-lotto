@@ -2,9 +2,7 @@ package model
 
 class LottoNumbers(
     val numbers: List<Int>
-) {
-    val size: Int
-        get() = numbers.size
+) : List<Int> by numbers {
 
     init {
         require(numbers.size == 6) {
