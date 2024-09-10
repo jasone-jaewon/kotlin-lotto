@@ -75,4 +75,30 @@ internal class LottoNumbersTest {
         // then
         matchedCount shouldBe 5
     }
+
+    @Test
+    fun `보너스 번호 매칭 테스트 - 성공`() {
+        // given
+        val lottoNumbers = LottoNumbers(1, 2, 3, 4, 5, 6)
+        val bonus = 6
+
+        // when
+        val matchBonus = lottoNumbers.matchBonus(bonus)
+
+        // then
+        matchBonus shouldBe true
+    }
+
+    @Test
+    fun `보너스 번호 매칭 테스트 - 실패`() {
+        // given
+        val lottoNumbers = LottoNumbers(1, 2, 3, 4, 5, 6)
+        val bonus = 45
+
+        // when
+        val matchBonus = lottoNumbers.matchBonus(bonus)
+
+        // then
+        matchBonus shouldBe false
+    }
 }

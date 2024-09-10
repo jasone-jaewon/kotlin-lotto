@@ -21,6 +21,6 @@ class LottoNumbers(
     }
 
     fun matchBonus(bonusNum: Int): Boolean {
-        TODO()
+        return bonusNum in numbers
     }
 }
