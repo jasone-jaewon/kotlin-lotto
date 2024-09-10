@@ -1,5 +1,5 @@
 package model
 
-class Lotto(
+data class Lotto(
     val numbers: LottoNumbers
 )

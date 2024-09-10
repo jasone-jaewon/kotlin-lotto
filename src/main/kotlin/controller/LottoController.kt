@@ -11,6 +11,6 @@ class LottoController {
     }
 
     fun createWinningLotto(lottoNumbers: LottoNumbers, bonusNumber: Int): WinningLotto {
-        TODO()
+        return WinningLotto(Lotto(lottoNumbers), bonusNumber)
     }
 }

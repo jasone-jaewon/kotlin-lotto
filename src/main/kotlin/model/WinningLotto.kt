@@ -1,6 +1,6 @@
 package model
 
-class WinningLotto(
+data class WinningLotto(
     private val lotto: Lotto,
     private val bonus: Int
 ) {
