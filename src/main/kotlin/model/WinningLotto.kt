@@ -10,7 +10,26 @@ class WinningLotto(
         }
     }
 
-    fun rank(matchedNum : Int, bonusMatch : Boolean) : Int {
-        TODO()
+    fun rank(matchedNum: Int, bonusMatch: Boolean): LottoRank {
+        if (matchedNum == LottoRank.FIRST.matchedCount) {
+            return LottoRank.FIRST
+        }
+
+        if (matchedNum == LottoRank.SECOND.matchedCount && bonusMatch) {
+            return LottoRank.SECOND
+        }
+
+        if (matchedNum == LottoRank.THIRD.matchedCount && !bonusMatch) {
+            return LottoRank.THIRD
+        }
+
+        if (matchedNum == LottoRank.FORTH.matchedCount) {
+            return LottoRank.FORTH
+        }
+
+        if (matchedNum == LottoRank.FIFTH.matchedCount) {
+            return LottoRank.FIFTH
+        }
+        return LottoRank.MISS
     }
 }

@@ -28,7 +28,7 @@ class WinningLottoTest {
 
         val rank = winningLotto.rank(6, true)
 
-        rank shouldBe 1
+        rank shouldBe LottoRank.FIRST
     }
 
     @Test
@@ -38,7 +38,7 @@ class WinningLottoTest {
 
         val rank = winningLotto.rank(5, true)
 
-        rank shouldBe 2
+        rank shouldBe LottoRank.SECOND
     }
 
     @Test
@@ -48,7 +48,7 @@ class WinningLottoTest {
 
         val rank = winningLotto.rank(5, false)
 
-        rank shouldBe 3
+        rank shouldBe LottoRank.THIRD
     }
 
     @Test
@@ -58,7 +58,7 @@ class WinningLottoTest {
 
         val rank = winningLotto.rank(4, true)
 
-        rank shouldBe 4
+        rank shouldBe LottoRank.FORTH
     }
 
     @Test
@@ -68,7 +68,7 @@ class WinningLottoTest {
 
         val rank = winningLotto.rank(3, true)
 
-        rank shouldBe 5
+        rank shouldBe LottoRank.FIFTH
     }
 
     @Test
@@ -78,6 +78,6 @@ class WinningLottoTest {
 
         val rank = winningLotto.rank(2, true)
 
-        rank shouldBe 0
+        rank shouldBe LottoRank.MISS
     }
 }
