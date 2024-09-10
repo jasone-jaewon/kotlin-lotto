@@ -17,6 +17,6 @@ class LottoNumbers(
     constructor(vararg numbers: Int) : this(numbers.toList())
 
     fun match(lottoNumbers: LottoNumbers): Int {
-        TODO("매칭된 숫자 리턴")
+        return numbers.intersect(lottoNumbers.toSet()).size
     }
 }
