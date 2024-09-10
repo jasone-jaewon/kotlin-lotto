@@ -3,9 +3,9 @@ package controller
 import io.kotest.matchers.shouldBe
 import model.Lotto
 import model.LottoNumbers
+import model.LottoRank
 import model.LottoResult
 import model.WinningLotto
-import model.LottoRank
 import org.junit.jupiter.api.Test
 
 internal class LottoControllerTest {

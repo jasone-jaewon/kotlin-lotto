@@ -26,6 +26,6 @@ class LottoController {
     }
 
     fun calculateWinningRate(results: LottoResult, totalPrice: Int): Double {
-        TODO("Not yet implemented")
+        return results.calculateTotalPrize() / totalPrice.toDouble()
     }
 }
