@@ -3,6 +3,7 @@ package controller
 import generateLottoNumbers
 import model.Lotto
 import model.LottoNumbers
+import model.LottoResult
 import model.WinningLotto
 
 class LottoController {
@@ -12,5 +13,9 @@ class LottoController {
 
     fun createWinningLotto(lottoNumbers: List<Int>, bonusNumber: Int): WinningLotto {
         return WinningLotto(LottoNumbers(lottoNumbers), bonusNumber)
+    }
+
+    fun getWinningResults(lottos: List<Lotto>, winningLotto: WinningLotto): LottoResult {
+        TODO()
     }
 }

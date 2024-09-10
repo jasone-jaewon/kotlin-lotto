@@ -1,4 +1,5 @@
 import controller.LottoController
+import model.LottoResult
 import view.LottoInputView
 
 val lottoController = LottoController()
@@ -14,6 +15,8 @@ fun main() {
     val bonusNumber = scanBonusNumber(lottoView)
 
     val winningLotto = lottoController.createWinningLotto(winningLottoNumbers, bonusNumber)
+
+    val results: LottoResult = lottoController.getWinningResults(lottos, winningLotto)
 }
 
 private fun scanMoney(lottoView: LottoInputView): Int {
