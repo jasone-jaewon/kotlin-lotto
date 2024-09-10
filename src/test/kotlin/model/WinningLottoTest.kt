@@ -12,7 +12,6 @@ class WinningLottoTest {
         assertThrows<IllegalArgumentException> { WinningLotto(lotto, bonus) }
     }
 
-
     @Test
     fun `보너스 번호 테스트 중복여부 - 정상`() {
         val bonus = 18
