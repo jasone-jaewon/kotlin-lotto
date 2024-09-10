@@ -1,11 +1,14 @@
+import controller.LottoController
 import view.LottoInputView
 
 
+val lottoController = LottoController()
 
 fun main() {
     val lottoView = LottoInputView()
     val money = scanMoney(lottoView)
     val games = calculateLotteryGames(money)
+    val lottos = lottoController.createLotto(games)
 }
 
 private fun scanMoney(lottoView: LottoInputView): Int {
