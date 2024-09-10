@@ -1,6 +1,5 @@
 package model
 
-import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 
@@ -22,7 +21,6 @@ internal class LottoNumbersTest {
         // when & then
         assertThrows<IllegalArgumentException> { LottoNumbers(numbers) }
     }
-
 
     @Test
     fun `로또 숫자의 갯수는 6개가 초과되면 예외가 발생한다`() {
