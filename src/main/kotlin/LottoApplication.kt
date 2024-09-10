@@ -8,6 +8,10 @@ fun main() {
     val money = scanMoney(lottoView)
     val games = calculateLotteryGames(money)
     val lottos = lottoController.createLotto(games)
+    lottoView.printLottos(lottos)
+
+    val winningLottoNumbers = scanWinningLotto(lottoView)
+    val bonusNumber = scanBonusNumber(lottoView)
 }
 
 private fun scanMoney(lottoView: LottoInputView): Int {
@@ -21,7 +25,7 @@ private fun scanMoney(lottoView: LottoInputView): Int {
     }
 }
 
-private fun scanWinningMoney(lottoView: LottoInputView): List<Int> {
+private fun scanWinningLotto(lottoView: LottoInputView): List<Int> {
     while (true) {
         try {
             lottoView.printWinningNumberInput()

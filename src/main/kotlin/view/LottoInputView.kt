@@ -1,5 +1,7 @@
 package view
 
+import model.Lotto
+
 class LottoInputView {
     companion object {
         const val MESSAGE_MONEY_PREFIX = "구입금액을 입력해 주세요."
@@ -29,5 +31,10 @@ class LottoInputView {
 
     fun scanBonusNumber(): Int {
         return readln().toInt()
+    }
+
+    fun printLottos(lottos: List<Lotto>) {
+        println("${lottos.size}개를 구매하셨습니다.")
+        lottos.forEach { println(it.numbers.numbers) }
     }
 }
